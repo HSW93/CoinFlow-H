@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gw4-ix-5O9">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="ixa-Lv-USc">
+            <objects>
+                <viewController id="Nre-ob-hFN" customClass="NewsViewController" customModule="CoinFlow_H" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31s-XE-BMR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Run-DD-LVU">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsListCell" id="e7P-I0-wJu" customClass="NewsListCell" customModule="CoinFlow_H" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7P-I0-wJu" id="DmH-gH-BXZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nre-ob-hFN" id="eGC-qb-nwL"/>
+                                    <outlet property="delegate" destination="Nre-ob-hFN" id="oaX-Aq-eKl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y4r-Pm-vAi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Run-DD-LVU" firstAttribute="leading" secondItem="Y4r-Pm-vAi" secondAttribute="leading" id="4MU-kf-DMj"/>
+                            <constraint firstItem="Run-DD-LVU" firstAttribute="top" secondItem="Y4r-Pm-vAi" secondAttribute="top" id="Le6-2M-NXh"/>
+                            <constraint firstItem="Y4r-Pm-vAi" firstAttribute="trailing" secondItem="Run-DD-LVU" secondAttribute="trailing" id="Vom-7H-1XO"/>
+                            <constraint firstItem="Y4r-Pm-vAi" firstAttribute="bottom" secondItem="Run-DD-LVU" secondAttribute="bottom" id="uLa-2V-c9N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="News" id="kiy-OV-OUV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzB-EL-acH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="938"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="kQ1-5Y-vKD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gw4-ix-5O9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" id="EMg-Ct-ZqX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XCs-we-6Ry">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nre-ob-hFN" kind="relationship" relationship="rootViewController" id="Fhq-KF-heO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JPW-jY-kri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="938"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
